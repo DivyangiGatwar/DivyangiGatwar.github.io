@@ -62,12 +62,12 @@ h1, h2 { margin-bottom:1rem; }
 .links a: hover {
   text-decoration: underline;
 }
-.project, .book {
+.project, .book, .paper {
   margin-bottom:1.5rem;
   padding-bottom:1rem;
   border-bottom: 1px solid #ddd;
 }
-.project h4, .book h3 {
+.project h4, .book h3, .paper h3 {
   margin-bottom:0.5rem;
   font-weight:600;
 }
