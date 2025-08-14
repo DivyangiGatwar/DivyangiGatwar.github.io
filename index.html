@@ -1,187 +1,39 @@
 <!doctype html>
-<!-- index.html -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Divyangi Gatwar</title>
-  
-  <!-- Meta tags -->
-  <meta name="description" content="Divyangi Gatwar Website" />
-  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
-
-  <!-- Fonts & Styles -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg: #ffffff;
-      --fg: #1a1a1a;
-      --accent: #0ea5e9;
-    }
-    [data-theme="dark"] {
-      --bg: #121212;
-      --fg: #e5e5e5;
-      --accent: #3b82f6;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--bg);
-      color: var(--fg);
-      line-height: 1.6;
-      display:flex; flex-direction:column; min-height:100vh;
-    }
-    header {
-      background: var(--bg);
-      border-bottom: 1px solid #ddd;
-      padding: 1rem;
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      position:sticky; top:0; z-index:100;
-    }
-    nav a {
-      margin: 0 0.75rem;
-      text-decoration: none;
-      color: var(--fg);
-      font-weight:500;
-    }
-    nav a.active {
-      color: var(--accent);
-      border-bottom:2px solid var(--accent);
-      padding-bottom:2px;
-    }
-    main { flex:1; padding:2rem; max-width:800px; margin:0 auto; }
-    section { margin-bottom:3rem; }
-    h1, h2 { margin-bottom:1rem; }
-    .toggle-btn {
-      background: none;
-      border:2px solid var(--accent);
-      color: var(--accent);
-      padding: 0.5rem 1rem;
-      border-radius:4px;
-      cursor:pointer;
-      font-size:0.9rem;
-    }
-    .links a {
-      margin-right:1rem;
-      color: var(--accent);
-    }
-    .project, .book {
-      margin-bottom:1.5rem;
-      padding-bottom:1rem;
-      border-bottom: 1px solid #ddd;
-    }
-    .project h3, .book h3 {
-      margin-bottom:0.5rem;
-    }
-    footer {
-      text-align:center;
-      padding:1rem 0;
-      font-size:0.9rem;
-      border-top:1px solid #ddd;
-    }
-  </style>
+  <title>About Me | Divyangi Gatwar</title>
+  <meta name="description" content="About Divyangi Gatwar" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 <header>
   <nav>
-    <a href="#about" class="active">About Me</a>
-    <a href="#projects">Projects</a>
-    <a href="#reading-log">Reading Log</a>
+    <a href="index.html" class="active">About Me</a>
+    <a href="projects.html">Projects</a>
+    <a href="reading-log.html">Reading Log</a>
   </nav>
-  <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">🌙 Dark Mode</button>
+  <button class="toggle-btn" id="theme-toggle">🌙 Dark Mode</button>
 </header>
 
 <main>
-  <!-- About Me -->
-  <section id="about">
-    <h1>About Me</h1>
-    <p>
-      Hi! I’m <strong>Divyangi Gatwar</strong> — a tech enthusiast with a strong background in software development and machine learning. I currently work at PhonePe, one of India’s leading online payments and financial services companies. 
-      Previously, I have worked at Amelia (now part of SoundHound AI) and Intel.
-      
-    </p>
-    <p class="links">
-      <a href="https://linkedin.com/divyangi-g" target="_blank">LinkedIn</a>
-      <a href="https://github.com/divyangi-g" target="_blank">GitHub</a>
-      <a href="https://divyangigatwar.medium.com/" target="_blank">Medium</a>
-    </p>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <h3>PHONEPE<h3>
-    <div class="project">
-      <h4><a href="#" target="_blank">End-to-End Automation of Customer Issue & Grievance Management (WIP)</a></h4>
-      <p>Building an automated Issue and Grievance Management (IGM) system for Pincode, PhonePe’s hyperlocal e-commerce platform. The solution leverages generative AI to understand user-reported issues and trigger appropriate 
-        resolution workflows — significantly reducing manual intervention and improving turnaround time.</p>
-    </div>
-    <div class="project">
-      <h4><a href="#" target="_blank">Time Slot Management Platform for Sellers</a></h4>
-      <p>Designed and developed an end-to-end time slot management system for Pincode, enabling sellers to define availability windows and allowing users to choose delivery slots accordingly. 
-        The platform handles slot creation, validation, conflict resolution, and real-time availability checks, ensuring a seamless and reliable delivery scheduling experience..</p>
-    </div>
-    <div class="project">
-      <h4><a href="#" target="_blank">Closed-Loop Checkout System</a></h4>
-      <p>Led the design of a closed-loop architecture for the checkout flow within the Pincode app, eliminating third-party dependencies and transitioning to fully internal services. This included replacing external APIs with in-house systems for payment orchestration, order validation, 
-        and delivery slot availability — resulting in improved reliability, reduced latency, and tighter system control.</p>
-    </div>
-    <h3>AMELIA<h3>
-    <div class="project">
-      <h4><a href="#" target="_blank">Python Code Obfuscation – EazyML</a></h4>
-      <p>Implemented end-to-end obfuscation of the entire EazyML codebase using PyArmor, securing source logic and protecting intellectual property..</p>
-    </div>
-  </section>
-
-  <!-- Reading Log -->
-  <section id="reading-log">
-    <h2>Reading Log</h2>
-    <div class="book">
-      <h3><a href="#" target="_blank">Building Microservices - Sam Newman</a></h3>
-      <h3><a href="#" target="_blank">Designing Data-Intensive Applications - Martin Kleppmann</a></h3>
-      <h3><a href="#" target="_blank">Effective Java - Sam Newman</a></h3>
-      <h3><a href="#" target="_blank">Clean Code - Robert Martin</a></h3>
-      <h3><a href="#" target="_blank">Dive Into Design Patterns - Alexander Shvets</a></h3>
-      <h3><a href="#" target="_blank">Java: A Beginner's Guide - Herbert Schildt</a></h3>
-    </div>
-  </section>
+  <h1>About Me</h1>
+  <p>
+    Hi! I’m <strong>Divyangi Gatwar</strong> — a tech enthusiast with a strong background in software development and machine learning. I currently work at PhonePe, one of India’s leading online payments and financial services companies. 
+    Previously, I have worked at Amelia (now part of SoundHound AI) and Intel.
+  </p>
+  <p class="links">
+    <a href="https://linkedin.com/divyangi-g" target="_blank">LinkedIn</a>
+    <a href="https://github.com/divyangi-g" target="_blank">GitHub</a>
+    <a href="https://divyangigatwar.medium.com/" target="_blank">Medium</a>
+  </p>
 </main>
 
 <footer>
   <p>© <span id="year"></span> Divyangi Gatwar. Built with ❤️.</p>
 </footer>
 
-<script>
-  // Theme toggle
-  const btn = document.getElementById('theme-toggle');
-  const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  btn.textContent = currentTheme === 'dark' ? '🌞 Light Mode' : '🌙 Dark Mode';
-
-  btn.addEventListener('click', () => {
-    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    btn.textContent = newTheme === 'dark' ? '🌞 Light Mode' : '🌙 Dark Mode';
-  });
-
-  // Smooth tab nav
-  document.querySelectorAll('nav a').forEach(a => {
-    a.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelectorAll('nav a').forEach(x => x.classList.remove('active'));
-      a.classList.add('active');
-      document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior:'smooth' });
-    });
-  });
-
-  // Auto-fill current year
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+<script src="theme.js"></script>
 </body>
 </html>
