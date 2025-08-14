@@ -1,188 +1,166 @@
 <!doctype html>
+<!-- index.html -->
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title><!-- REPLACE: Your Name — Short tag line -->Your Name — Software Engineer</title>
-  <meta name="description" content="<!-- REPLACE: Short 1-line bio or tagline -->Experienced software engineer building AI and web systems." />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Divyangi Gatwar</title>
+  
+  <!-- Meta tags -->
+  <meta name="description" content="Divyangi Gatwar – Software Developer | Projects & Reading Log" />
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)" />
+
+  <!-- Fonts & Styles -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#94a3b8;--accent:#7c3aed;--glass: rgba(255,255,255,0.03)}
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;color:#e6eef8;background:linear-gradient(180deg,var(--bg),#071028);}
-    a{color:inherit;text-decoration:none}
-    .container{max-width:1100px;margin:0 auto;padding:32px}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .brand{display:flex;align-items:center;gap:12px}
-    .logo{width:44px;height:44px;background:linear-gradient(135deg,var(--accent),#06b6d4);border-radius:10px;display:grid;place-items:center;color:white;font-weight:700}
-    nav{display:flex;gap:18px}
-    nav a{color:var(--muted);font-weight:600}
-    .cta{background:linear-gradient(90deg,var(--accent),#06b6d4);padding:10px 14px;border-radius:10px;color:white;font-weight:700}
-
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:center;padding:48px 0}
-    .card{background:linear-gradient(180deg,var(--card),rgba(7,10,15,0.5));padding:22px;border-radius:14px;box-shadow:0 6px 24px rgba(2,6,23,0.7);border:1px solid rgba(255,255,255,0.03)}
-    h1{font-size:36px;margin:0 0 12px}
-    p.lead{color:var(--muted);margin:0 0 18px;line-height:1.6}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{padding:6px 10px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600;font-size:13px}
-
-    /* Projects grid */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .project{padding:16px;border-radius:12px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
-    .project h3{margin:0 0 8px}
-    .muted{color:var(--muted)}
-
-    /* Contact */
-    form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:#e6eef8}
-    button{background:var(--accent);border:none;color:white;padding:10px 12px;border-radius:8px;font-weight:700}
-
-    footer{padding:32px 0;color:var(--muted)}
-
-    /* Responsive */
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.container{padding:20px}}
+    :root {
+      --bg: #ffffff;
+      --fg: #1a1a1a;
+      --accent: #0ea5e9;
+    }
+    [data-theme="dark"] {
+      --bg: #121212;
+      --fg: #e5e5e5;
+      --accent: #3b82f6;
+    }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      display:flex; flex-direction:column; min-height:100vh;
+    }
+    header {
+      background: var(--bg);
+      border-bottom: 1px solid #ddd;
+      padding: 1rem;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      position:sticky; top:0; z-index:100;
+    }
+    nav a {
+      margin: 0 0.75rem;
+      text-decoration: none;
+      color: var(--fg);
+      font-weight:500;
+    }
+    nav a.active {
+      color: var(--accent);
+      border-bottom:2px solid var(--accent);
+      padding-bottom:2px;
+    }
+    main { flex:1; padding:2rem; max-width:800px; margin:0 auto; }
+    section { margin-bottom:3rem; }
+    h1, h2 { margin-bottom:1rem; }
+    .toggle-btn {
+      background: none;
+      border:2px solid var(--accent);
+      color: var(--accent);
+      padding: 0.5rem 1rem;
+      border-radius:4px;
+      cursor:pointer;
+      font-size:0.9rem;
+    }
+    .links a {
+      margin-right:1rem;
+      color: var(--accent);
+    }
+    .project, .book {
+      margin-bottom:1.5rem;
+      padding-bottom:1rem;
+      border-bottom: 1px solid #ddd;
+    }
+    .project h3, .book h3 {
+      margin-bottom:0.5rem;
+    }
+    footer {
+      text-align:center;
+      padding:1rem 0;
+      font-size:0.9rem;
+      border-top:1px solid #ddd;
+    }
   </style>
 </head>
+
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">YN</div>
-        <div>
-          <div style="font-weight:800"><!-- REPLACE: Your Name -->Your Name</div>
-          <div style="font-size:13px;color:var(--muted)"><!-- REPLACE: short title -->Senior SWE • AI</div>
-        </div>
-      </div>
+<header>
+  <nav>
+    <a href="#about" class="active">About Me</a>
+    <a href="#projects">Projects</a>
+    <a href="#reading-log">Reading Log</a>
+  </nav>
+  <button class="toggle-btn" id="theme-toggle" aria-label="Toggle theme">🌙 Dark Mode</button>
+</header>
 
-      <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact" class="cta">Contact</a>
-      </nav>
-    </header>
+<main>
+  <!-- About Me -->
+  <section id="about">
+    <h1>About Me</h1>
+    <p>
+      Hi! I’m <strong>Divyangi Gatwar</strong>. I’m a software engineer passionate about building scalable web apps and learning new technologies.
+    </p>
+    <p class="links">
+      <a href="https://linkedin.com/divyangi-g" target="_blank">LinkedIn</a>
+      <a href="https://github.com/divyangi-g" target="_blank">GitHub</a>
+      <a href="https://divyangigatwar.medium.com/" target="_blank">Medium</a>
+    </p>
+  </section>
 
-    <main>
-      <section class="hero" aria-label="Intro">
-        <div>
-          <div class="card">
-            <h1><!-- REPLACE: Big headline -->Hi — I build AI systems & developer tools</h1>
-            <p class="lead"><!-- REPLACE: 1-2 sentence pitch about you -->I’m a software engineer with 6+ years building scalable systems and AI tools. I focus on inference performance and developer DX.</p>
-            <div class="skills" aria-hidden>
-              <!-- REPLACE: comma-separated skills into individual span.chip -->
-              <span class="chip">Python</span>
-              <span class="chip">PyTorch</span>
-              <span class="chip">Kubernetes</span>
-              <span class="chip">Distributed Systems</span>
-            </div>
-            <div style="margin-top:18px;display:flex;gap:10px">
-              <a href="#projects" class="cta">See projects</a>
-              <a href="#contact" style="color:var(--muted);align-self:center">Hire / Work</a>
-            </div>
-          </div>
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <!-- Example project - duplicate this block as needed -->
+    <div class="project">
+      <h3><a href="#" target="_blank">Project Name</a></h3>
+      <p>Short description of the project, tech stack, and what you learned or built.</p>
+    </div>
+  </section>
 
-          <section id="about" style="margin-top:22px">
-            <div class="card">
-              <h2 style="margin-top:0">About</h2>
-              <p class="muted"><!-- REPLACE: Long-form bio (2-5 paragraphs) -->Experienced SWE with a passion for applied ML, scalable inference, and clean developer APIs. I’ve led infra projects and open-source contributions.</p>
-            </div>
-          </section>
+  <!-- Reading Log -->
+  <section id="reading-log">
+    <h2>Reading Log</h2>
+    <!-- Example book/paper - duplicate this block -->
+    <div class="book">
+      <h3><a href="#" target="_blank">Title of Book or Paper</a></h3>
+      <p>Notes or brief summary of what you're reading / read.</p>
+    </div>
+  </section>
+</main>
 
-        </div>
+<footer>
+  <p>© <span id="year"></span> Divyangi Gatwar. Built with ❤️.</p>
+</footer>
 
-        <aside>
-          <div class="card">
-            <h3 style="margin-top:0">Quick facts</h3>
-            <p class="muted">Location: <!-- REPLACE: City, Country -->City, Country</p>
-            <p class="muted">Email: <a href="mailto:you@example.com">you@example.com</a></p>
-            <p class="muted">Resume: <a href="#">Download</a></p>
-            <div style="height:12px"></div>
-            <h4 style="margin:0 0 6px">Social</h4>
-            <div style="display:flex;gap:8px">
-              <!-- REPLACE: links -->
-              <a class="muted" href="#">GitHub</a>
-              <a class="muted" href="#">LinkedIn</a>
-              <a class="muted" href="#">Twitter</a>
-            </div>
-          </div>
-        </aside>
-      </section>
+<script>
+  // Theme toggle
+  const btn = document.getElementById('theme-toggle');
+  const currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', currentTheme);
+  btn.textContent = currentTheme === 'dark' ? '🌞 Light Mode' : '🌙 Dark Mode';
 
-      <section id="projects" style="margin-top:28px">
-        <h2>Projects</h2>
-        <div class="grid">
-          <!-- REPLACE: duplicate project blocks with your projects -->
-          <article class="project">
-            <h3>Project One</h3>
-            <p class="muted">Short description — what it does and tech used.</p>
-            <p style="margin-top:12px"><a href="#">View on GitHub</a></p>
-          </article>
+  btn.addEventListener('click', () => {
+    const newTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    btn.textContent = newTheme === 'dark' ? '🌞 Light Mode' : '🌙 Dark Mode';
+  });
 
-          <article class="project">
-            <h3>Project Two</h3>
-            <p class="muted">Short description — model, infra, or library details.</p>
-            <p style="margin-top:12px"><a href="#">View on GitHub</a></p>
-          </article>
-        </div>
-      </section>
-
-      <section id="blog" style="margin-top:28px">
-        <h2>Recent posts</h2>
-        <div class="grid">
-          <!-- REPLACE: add blog post teasers or link to medium/dev -->
-          <div class="card">
-            <h3>How I optimized inference latency</h3>
-            <p class="muted">A short excerpt and link to full post.</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact" style="margin-top:28px">
-        <h2>Contact</h2>
-        <div class="grid">
-          <div class="card">
-            <h3 style="margin-top:0">Get in touch</h3>
-            <!-- Replace form action with your Formspree or Getform endpoint -->
-            <form action="https://formspree.io/f/your-form-id" method="POST">
-              <input type="text" name="name" placeholder="Your name" required>
-              <input type="email" name="email" placeholder="Email" required>
-              <input type="text" name="subject" placeholder="Subject">
-              <textarea name="message" rows="6" placeholder="Message" required></textarea>
-              <button type="submit">Send message</button>
-            </form>
-          </div>
-
-          <div class="card">
-            <h3 style="margin-top:0">Availability</h3>
-            <p class="muted">Open to contract & full-time roles. Prefer remote-first teams.</p>
-            <h4 style="margin-bottom:6px">Location</h4>
-            <p class="muted"><!-- REPLACE: timezone or preferred hours -->Asia/Kolkata (UTC+5:30)</p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <footer style="margin-top:36px;display:flex;justify-content:space-between;align-items:center">
-      <div class="muted">© <!-- REPLACE: Year & Name -->2025 Your Name</div>
-      <div class="muted">Built with ❤️ — <a href="https://pages.github.com/">GitHub Pages</a></div>
-    </footer>
-  </div>
-
-  <script>
-    // smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', (e)=>{
-        const href = a.getAttribute('href');
-        if(href.length>1){
-          e.preventDefault();
-          const el = document.querySelector(href);
-          if(el) el.scrollIntoView({behavior:'smooth',block:'start'});
-        }
-      })
+  // Smooth tab nav
+  document.querySelectorAll('nav a').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelectorAll('nav a').forEach(x => x.classList.remove('active'));
+      a.classList.add('active');
+      document.querySelector(a.getAttribute('href')).scrollIntoView({ behavior:'smooth' });
     });
-  </script>
+  });
+
+  // Auto-fill current year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
-
