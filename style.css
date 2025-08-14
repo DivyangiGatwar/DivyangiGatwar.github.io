@@ -48,9 +48,19 @@ h1, h2 { margin-bottom:1rem; }
   cursor:pointer;
   font-size:0.9rem;
 }
+.links {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  gap: 1.5rem; /* Space between links */
+  margin-top: 1.5rem; /* Adds space above links */
+}
 .links a {
-  margin-right:1rem;
   color: var(--accent);
+  font-weight: 500;
+  text-decoration: none;
+}
+.links a: hover {
+  text-decoration: underline;
 }
 .project, .book {
   margin-bottom:1.5rem;
